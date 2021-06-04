@@ -19,5 +19,6 @@ Make sure to have ```Node``` installed.
 
 Clone the repo then download all dependencies by running ```npm install```.
 
+Run ```node server.js``` and view on ```http://localhost:3000/```.
 
 
