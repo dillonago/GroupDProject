@@ -1,3 +1,7 @@
 # GroupDProject
 
-david bonnaud
+Gavin Gray
+Dillon
+Sean Javiya
+David Bonnaud
+Shreeji Khalasi
