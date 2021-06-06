@@ -22,6 +22,15 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/index.html')
 
 //defining routes
 
+const sam1Route = require('./routes/sam1');
+
+app.use('/sam1', sam1Route);
+
+const sam2Route = require('./routes/sam2');
+
+app.use('/sam2', sam2Route);
+
+
 //SAMPLE ROUTE
 app.get('/tproute', function (req, res) {
    res.send('This is routing for the application developed using Node and Express...');
