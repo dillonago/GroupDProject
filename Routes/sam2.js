@@ -1,9 +1,8 @@
-const express = require('express');
+const router = require('express').Router();
+const verify = require('./verifyToken');
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-    res.send('We are on sample2');
+router.get('/', verify, (req, res) => {
+    res.send(req.user);
  });
 
 module.exports = router;

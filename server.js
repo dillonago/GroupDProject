@@ -1,7 +1,10 @@
 // modules =================================================
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+
+dotenv.config();
 
 // set our port
 const port = 3000;
@@ -15,16 +18,18 @@ app.use('assets/css', express.static(__dirname + 'assets/css'));
 // config files
 var db = require('./config/db');
 console.log("connecting--",db);
-mongoose.connect(db.url, { useNewUrlParser: true, useUnifiedTopology: true }); //Mongoose connection created
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }); //Mongoose connection created
+
+//Middleware to send post requests
+app.use(express.json());
 
 // frontend routes =========================================================
 app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/index.html')));
 
 //defining routes
-
 const sam1Route = require('./routes/sam1');
 
-app.use('/sam1', sam1Route);
+app.use('/user', sam1Route)
 
 const sam2Route = require('./routes/sam2');
 
