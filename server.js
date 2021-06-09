@@ -29,7 +29,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/index.html')
 //defining routes
 const sam1Route = require('./routes/sam1');
 
-app.use('/sam1', sam1Route)
+app.use('/user', sam1Route)
 
 const sam2Route = require('./routes/sam2');
 
