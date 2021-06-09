@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const {registerValidation, loginValidation} = require('../validation')
 
 router.get('/', (req, res) => {
-    res.send('We are on sample1');
+    res.send('We are on User Routes');
  });
 
  router.post('/register', async (req, res) => {

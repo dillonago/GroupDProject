@@ -12,12 +12,12 @@ const port = 3000;
 const path = require('path');
 
 // frontend ===========================================
-app.use('assets/images', express.static(__dirname + 'assets/images'));
-app.use('assets/css', express.static(__dirname + 'assets/css'));
+app.use(express.static(__dirname + '/assets/images'));
+app.use(express.static(__dirname + '/assets/css'));
 
 // config files
 var db = require('./config/db');
-console.log("connecting--",db);
+console.log("connecting--",db.url);
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }); //Mongoose connection created
 
 //Middleware to send post requests
@@ -27,9 +27,9 @@ app.use(express.json());
 app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/index.html')));
 
 //defining routes
-const sam1Route = require('./routes/sam1');
+const userRoute = require('./routes/userRoute');
 
-app.use('/user', sam1Route)
+app.use('/user', userRoute)
 
 const sam2Route = require('./routes/sam2');
 
@@ -55,4 +55,4 @@ app.get('/api/dogs', function(req, res) {
    });
 });*/
 // startup our app at http://localhost:3000
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`App listening on port ${port}!`));
