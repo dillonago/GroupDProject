@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="scripts" href="script.js">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,12 +11,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"><i class="fas fa-paw"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,22 +31,118 @@
             </div>
         </div>
     </nav>
-    <section class="container-fluid">
-        <div class="container d-flex justify-content-center">
-            <!-- Content here -->
-            <h1>DOG SITE</h1>
-        </div>
-
-        <div class="card profileCard shadow-lg p-3 mb-5 bg-white rounded">
-            <img class="card-img-top" src="Ollie.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+    <section class="container-fluid spacing-1">
+        <div class="row g-5">
+            <div class="container d-flex justify-content-center">
+                <!-- Content here -->
+                <h1 class="title">DOG SITE</h1>
             </div>
         </div>
     </section>
+
+
+    <section class="container-fluid">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="profile-card-6"><img src="Ollie.png" class="card-img-top img img-responsive">
+                        <div class="profile-name">JOHN
+                            <br>DOE</div>
+                        <div class="profile-position">Lorem Ipsum Donor</div>
+                        <div class="profile-overview">
+                            <div class="profile-overview">
+                                <div class="row row-mg text-center">
+                                    <div class="col-xs-4">
+                                        <h3>1</h3>
+                                        <p>Rank</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h3>50</h3>
+                                        <p>Matches</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h3>35</h3>
+                                        <p>Goals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="profile-card-6"><img src="Ollie.png" class="card-img-top img img-responsive">
+                        <div class="profile-name">JOHN
+                            <br>DOE</div>
+                        <div class="profile-position">Lorem Ipsum Donor</div>
+                        <div class="profile-overview">
+                            <div class="profile-overview">
+                                <div class="row row-mg text-center">
+                                    <div class="col-xs-4">
+                                        <h3>1</h3>
+                                        <p>Rank</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h3>50</h3>
+                                        <p>Matches</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h3>35</h3>
+                                        <p>Goals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="profile-card-6"><img src="Ollie.png" class="card-img-top img img-responsive">
+                        <div class="profile-name">JOHN
+                            <br>DOE</div>
+                        <div class="profile-position">Lorem Ipsum Donor</div>
+                        <div class="profile-overview">
+                            <div class="profile-overview">
+                                <div class="row row-mg text-center">
+                                    <div class="col-xs-4">
+                                        <h3>1</h3>
+                                        <p>Rank</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h3>50</h3>
+                                        <p>Matches</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <h3>35</h3>
+                                        <p>Goals</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="check-item" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="bi bi-x-circle-fill next-icon" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                    </svg></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="check-item" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="bi bi-check-circle-fill next-icon" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </section>
+
+
+
+
 
 
 
@@ -56,14 +155,14 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
