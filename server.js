@@ -24,7 +24,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopo
 app.use(express.json());
 
 // frontend routes =========================================================
-app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/profile.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/index.html')));
 
 //defining routes
 const userRoute = require('./routes/userRoute');
