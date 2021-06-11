@@ -1,11 +1,17 @@
 body {
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    margin: 0;
+    color: #6a6f8c;
+    background: #c8c8c8;
+    font: 600 16px/18px 'Open Sans', sans-serif;
     height: 100%;
-
+    
 }
 html {
     height: 100%;
+}
+
+nav {
+    background-color: #ffffff;
 }
 .profileCard {
     width: 28rem;
@@ -147,6 +153,7 @@ html {
 .next-icon {
     height: 100%;
     width: 100%;
+    color: #212529 !important;
   }
 
   .shadow1 { 
@@ -154,8 +161,99 @@ html {
   }
 
   .title {
-    font-family: Blippo, fantasy;
+    font-family: 'Fredoka One', cursive;
+    font-size: 5em;
+    letter-spacing: 4px;
+    text-shadow: 4px 2px 8px #212529c9;
+    text-align: center;
   }
+
+  .carousel-fade .carousel-inner .carousel-item {
+    -webkit-transition-property:opacity;
+    transition-property:opacity;
+  }
+  
+  .carousel-fade .carousel-inner .active.carousel-item-left, .carousel-fade .carousel-inner .active.carousel-item-right, .carousel-fade .carousel-inner .carousel-item {
+    opacity:0;
+  }
+  
+  .carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .carousel-item-next.carousel-item-left, .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
+    opacity:1;
+  }
+  
+  .carousel-fade .carousel-inner .active.carousel-item-left, .carousel-fade .carousel-inner .active.carousel-item-right, .carousel-fade .carousel-inner .carousel-item-next, .carousel-fade .carousel-inner .carousel-item-prev {
+    left:0;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+  }
+
+.carousel-control {
+    max-height:21%; 
+    margin-top:25%;
+    color:#212529;
+}
+
+.carousel-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1 !important;
+   }
+
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    opacity: .7 !important;
+}
+
+
+.shadow {
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 3px rgba(34, 33, 33, 0.5));
+    /* Similar syntax to box-shadow */
+  }
+.btn {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+
+@media (max-width: 576px) { 
+    .carousel-control {
+        margin-top:125%;
+    }
+
+    .spacing-1 {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+}
+
+.navbar {
+    box-shadow: 0px 5px 30px 7px rgba(0, 0, 0, 0.35);
+    background-color: #212529 !important;
+}
+
+/*TESTING*/
+
+
+
+
+
+
+
+
+
+
 
 
 
