@@ -4,18 +4,17 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {registerValidation, loginValidation} = require('../validation')
 
-router.get('/', (req, res) => {
-    res.send('We are on User Routes');
- });
+
+router.get('/', (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html'));
 
  router.post('/register', async (req, res) => {
     const {error} = registerValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
-   
+
     //Checking if the user is already in the db.
     const emailExists = await User.findOne({email: req.body.email});
     if(emailExists) return res.status(400).send('Email already exists');
-   
+
     //Hash passwords
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
@@ -23,46 +22,19 @@ router.get('/', (req, res) => {
 
     //Create new user.
     const user = new User({
-        name: req.body.name, 
+        name: req.body.name,
         email: req.body.email,
         password: hashedPassword
     });
-    try{ 
+    try{
         const savedUser = await user.save();
         res.send({user: user._id});
     }catch(err){
         res.status(400).send(err);
     }
-     
+
  });
 
- router.post('/register', async (req, res) => {
-    const {error} = registerValidation(req.body);
-    if(error) return res.status(400).send(error.details[0].message);
-   
-    //Checking if the user is already in the db.
-    const emailExists = await User.findOne({email: req.body.email});
-    if(emailExists) return res.status(400).send('Email already exists');
-   
-    //Hash passwords
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(req.body.password, salt);
-
-
-    //Create new user.
-    const user = new User({
-        name: req.body.name, 
-        email: req.body.email,
-        password: hashedPassword
-    });
-    try{ 
-        const savedUser = await user.save();
-        res.send({user: user._id});
-    }catch(err){
-        res.status(400).send(err);
-    }
-     
- });
 
  //Login
  router.post('/login', async (req,res) => {
