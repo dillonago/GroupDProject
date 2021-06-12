@@ -156,17 +156,30 @@ nav {
     color: #212529 !important;
   }
 
-  .shadow1 { 
+.shadow1 { 
     box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
-  }
+}
 
-  .title {
+.title {
     font-family: 'Fredoka One', cursive;
     font-size: 5em;
     letter-spacing: 4px;
     text-shadow: 4px 2px 8px #212529c9;
     text-align: center;
-  }
+}
+
+.nav-item {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1.5px;
+}
+
+.nav-item:hover {
+    color: #7c7c7c !important;
+}
+
+.text-white {
+    color:#c8c8c8 !important;
+}
 
   .carousel-fade .carousel-inner .carousel-item {
     -webkit-transition-property:opacity;
@@ -225,6 +238,11 @@ nav {
     box-shadow: none;
   }
 
+.navbar {
+    box-shadow: 0px 5px 30px 7px rgba(0, 0, 0, 0.35);
+    background-color: #212529 !important;
+}
+
 
 @media (max-width: 576px) { 
     .carousel-control {
@@ -236,15 +254,117 @@ nav {
         margin-top: 40px;
     }
 
+    .modal-dialog {
+        max-width: 400px;
+    }
+    .modal-dialog .modal-content {
+        padding: 1rem;
+    }
+
+    
+
 }
 
-.navbar {
-    box-shadow: 0px 5px 30px 7px rgba(0, 0, 0, 0.35);
-    background-color: #212529 !important;
-}
 
-/*TESTING*/
+.modal-header .close {
+    margin-top: -1.5rem;
+  }
+   
+  .form-title {
+    margin: -2rem 0rem 2rem;
+  }
+   
+  .btn-round {
+    border-radius: 3rem !important;
+  }
+   
+  .delimiter {
+    padding: 1rem;
+  }
+   
+  .social-buttons .btn {
+    margin: 0 0.5rem 1rem;
+  }
+   
+  .signup-section {
+    padding: 0.3rem 0rem;
+  }
 
+  .btn-size-1 {
+      height: 100px;
+      width: 100px;
+  }
+
+ul {
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    position: relative;
+    width:60px;
+    height:60px;
+    display:block;
+    text-align:center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+  }
+  
+  ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration:none;
+  }
+  
+  ul li a .fab {
+    width: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+  }
+  
+  ul li:nth-child(1) a:hover .fab {
+    color: #3b5998;
+  }
+  
+  ul li:nth-child(2) a:hover .fab {
+    color: #00aced;
+  }
+  
+  ul li:nth-child(3) a:hover .fab {
+    color: #dd4b39;
+  }
+  
+  ul li:nth-child(4) a:hover .fab {
+    color: #007bb6;
+  }
+  
+  ul li:nth-child(5) a:hover .fab {
+    color: #e4405f;
+  }
+
+  /*TESTING*/
+
+
+
+  
+
+  
 
 
 
