@@ -22,6 +22,14 @@ const userSchema = new mongoose.Schema({
     date: {
         type: Date, 
         default: Date.now
+    },
+    phone: {
+        type: String, 
+        default: ""
+    },
+    zip: {
+        type: String, 
+        default: ""
     }
 });
 
