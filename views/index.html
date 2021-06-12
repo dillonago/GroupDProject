@@ -22,42 +22,72 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/"><i class="fas fa-paw"></i></a>
+        <a class="navbar-brand" href="#"><i class="fas fa-paw"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="/">Home</a>
-                <a class="nav-item nav-link" href="user">Profile</a>
-                <a class="nav-item nav-link" href="#">PlayDates</a>
+                <a class="nav-item nav-link text-white" href="/">Home</a>
+                <a class="nav-item nav-link text-white" href="#">Profile</a>
+                <a class="nav-item nav-link text-white" href="#">PlayDates</a>
             </div>
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN/SIGNUP</a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </li>
+                    <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
+                        data-target="#loginModal">Login/Signup</a>
             </ul>
         </div>
+
+
+        <!-- Modal -->
+
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-title text-center">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email1"
+                                        placeholder="Your email address...">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password1"
+                                        placeholder="Your password...">
+                                </div>
+                                <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                            </form>
+
+                            <div class="text-center text-muted delimiter">or use a social network</div>
+                            <div class="d-flex justify-content-center social-buttons">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                  </ul>
+                                </di>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+                    </div>
+                </div>
+            </div>
     </nav>
     <section class="container-fluid spacing-1">
         <div class="row g-5">
@@ -151,8 +181,8 @@
             <div class="container">
                 <a class="carousel-control-prev carousel-control" href="#carouselExampleControls" role="button"
                     data-slide="next" onclick="this.blur();">
-                    <span class="check-item" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
-                            fill="#212529" class="bi bi-x-circle-fill next-icon shadow" viewBox="0 0 16 16">
+                    <span class="check-item" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" fill="#212529"
+                            class="bi bi-x-circle-fill next-icon shadow" viewBox="0 0 16 16">
                             <path
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                         </svg></span>
@@ -160,8 +190,8 @@
                 </a>
                 <a class="carousel-control-next carousel-control" href="#carouselExampleControls" role="button"
                     data-slide="next" onclick="this.blur();">
-                    <span class="check-item" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
-                            fill="#212529" class="bi bi-check-circle-fill next-icon shadow" viewBox="0 0 16 16">
+                    <span class="check-item" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" fill="#212529"
+                            class="bi bi-check-circle-fill next-icon shadow" viewBox="0 0 16 16">
                             <path
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                         </svg></span>
