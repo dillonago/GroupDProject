@@ -16,8 +16,6 @@ app.use(express.static(__dirname + '/assets/images'));
 app.use(express.static(__dirname + '/assets/css'));
 
 // config files
-var db = require('./config/db');
-console.log("connecting--",db.url);
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }); //Mongoose connection created
 
 //Middleware to send post requests
