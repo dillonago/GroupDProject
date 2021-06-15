@@ -17,56 +17,182 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/"><i class="fas fa-paw"></i></a>
+        <a class="navbar-brand" href="#"><i class="fas fa-paw"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="/">Home</a>
-          <a class="nav-item nav-link" href="user">Profile</a>
-          <a class="nav-item nav-link" href="user/playdates">PlayDates</a>
-         </div>
-    
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN/SIGNUP</a>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link text-white" href="/">Home</a>
+                <a class="nav-item nav-link text-white" href="user">Profile</a>
+                <a class="nav-item nav-link text-white" href="user/playdates">PlayDates</a>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <section class="container-fluid spacing-1">
-        <div class="row g-5">
-            <div class="container-fluid d-flex justify-content-center">
-                <!-- Content here -->
-                <h1 class="title">PUPPY LOVE</h1>
+
+            <ul class="navbar-nav ml-auto">
+                <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
+                    data-target="#loginModal">Login/Signup</a>
+            </ul>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered cascading-modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-c-tabs">
+                        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active form-tabs" data-toggle="tab" href="#panel7" role="tab"><i
+                                        class="fas fa-user mr-1"></i>
+                                    Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link form-tabs" data-toggle="tab" href="#panel8" role="tab"><i
+                                        class="fas fa-user-plus mr-1"></i>
+                                    Register</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+                                <!--- modal body form --->
+                                <div class="modal-header modal-color border-bottom-0">
+                                </div>
+                                <div class="modal-body modal-color">
+                                    <div class="form-title text-center">
+                                        <h4>Welcome Back!</h4>
+                                    </div>
+                                    <div class="d-flex flex-column text-center">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email1"
+                                                    placeholder="Your email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="password1"
+                                                    placeholder="Your password">
+                                            </div>
+                                            <button type="button" id="loginbtn"
+                                                class="btn btn-info btn-block btn-round">Login</button>
+                                        </form>
+
+                                        <div class="text-center text-muted delimiter">or use a social network</div>
+                                        <div class="d-flex justify-content-center social-buttons">
+                                            <ul class="ul">
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-facebook"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-twitter"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-google-plus-g"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-linkedin"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-instagram"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                            </di>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="options text-center text-md-right mt-1">
+                                        <p>Not a member? <a class="blue-text" data-toggle="tab" href="#panel8">Sign
+                                                Up</a></p>
+                                        <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                                        data-dismiss="modal">Close</button>
+                                </div>
+                                <!--- modal body form --->
+
+                            </div>
+                            <div class="tab-pane fade" id="panel8" role="tabpanel">
+                                <!--- modal body form --->
+                                <div class="modal-header modal-color border-bottom-0">
+                                </div>
+                                <div class="modal-body modal-color">
+                                    <div class="form-title text-center">
+                                        <h4>Sign up</h4>
+                                    </div>
+                                    <div class="d-flex flex-column text-center">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email1"
+                                                    placeholder="Your email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="password1"
+                                                    placeholder="Your password">
+                                            </div>
+                                            <button type="button" id="loginbtn"
+                                                class="btn btn-info btn-block btn-round">Login</button>
+                                        </form>
+
+                                        <div class="text-center text-muted delimiter">or use a social network</div>
+                                        <div class="d-flex justify-content-center social-buttons">
+                                            <ul class="ul">
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-facebook"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-twitter"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-google-plus-g"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-linkedin"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="li"><a class="a" href="#"><i class="fab fa-instagram"
+                                                            aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                            </di>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="options text-right">
+                                        <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log
+                                                In</a></p>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                                        data-dismiss="modal">Close</button>
+                                </div>
+                                <!--- modal body form --->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        <!-- Modal -->
+
+
+
+    </nav>
+    <div class="profile-head">
+        <section class="container-fluid spacing-1">
+            <div class="row g-5">
+                <div class="container-fluid d-flex justify-content-center">
+                    <!-- Content here -->
+                    <h1 class="title">Unleashed</h1>
+                </div>
+            </div>
+        </section>
+    </div>
 
 
     <section class="container-fluid">
@@ -193,6 +319,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+
 </body>
 
 </html>
