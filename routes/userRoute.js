@@ -6,8 +6,9 @@ const {registerValidation, loginValidation} = require('../validation')
 
 
 router.get('/', (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html'));
+router.get('/playdates', (req, res) =>  res.sendFile(process.cwd()+'/views/playdates.html'));
 
- router.post('/register', async (req, res) => {
+router.post('/register', async (req, res) => {
     const {error} = registerValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
 
@@ -33,9 +34,9 @@ router.get('/', (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html')
         res.status(400).send(err);
     }
 
- });
+});
 
- router.post('/like_user', async (req, res) => {
+router.post('/like_user', async (req, res) => {
     const {error} = registerValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
 
@@ -61,11 +62,11 @@ router.get('/', (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html')
         res.status(400).send(err);
     }
 
- });
+});
 
 
- //Login
- router.post('/login', async (req,res) => {
+//Login
+router.post('/login', async (req,res) => {
     const {error} = loginValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
 
@@ -80,7 +81,7 @@ router.get('/', (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html')
     //Create and assign token
     const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
     res.header('auth-token', token).send(token);
- });
+});
 
 
 module.exports = router;
