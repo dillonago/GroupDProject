@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title> Profile - Dog Site </title>
 
+  <title> Profile - Dog Site </title>
+  
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/profile.css">
   <link rel="scripts" href="script.js">
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -12,61 +13,187 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- FONTAWESOME -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="/"><i class="fas fa-paw"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/">Home</a>
-      <a class="nav-item nav-link" href="user">Profile</a>
-      <a class="nav-item nav-link" href="user/playdates">PlayDates</a>
-     </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link text-white" href="/">Home</a>
+        <a class="nav-item nav-link text-white" href="user">Profile</a>
+        <a class="nav-item nav-link text-white" href="user/playdates">PlayDates</a>
+      </div>
 
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN/SIGNUP</a>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
+      <ul class="navbar-nav ml-auto">
+        <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
+          data-target="#loginModal">Login/Signup</a>
+      </ul>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered cascading-modal" role="document">
+        <div class="modal-content">
+          <div class="modal-c-tabs">
+            <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active form-tabs" data-toggle="tab" href="#panel7" role="tab"><i
+                    class="fas fa-user mr-1"></i>
+                  Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link form-tabs" data-toggle="tab" href="#panel8" role="tab"><i
+                    class="fas fa-user-plus mr-1"></i>
+                  Register</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+                <!--- modal body form --->
+                <div class="modal-header modal-color border-bottom-0">
+                </div>
+                <div class="modal-body modal-color">
+                  <div class="form-title text-center">
+                    <h4>Welcome Back!</h4>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <form>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email1" placeholder="Your email">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password">
+                      </div>
+                      <button type="button" id="loginbtn" class="btn btn-info btn-block btn-round">Login</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter">or use a social network</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                      <ul class="ul">
+                        <li class="li"><a class="a" href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                      </ul>
+                      </di>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="options text-center text-md-right mt-1">
+                    <p>Not a member? <a class="blue-text" data-toggle="tab" href="#panel8">Sign
+                        Up</a></p>
+                    <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                  </div>
+                  <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                    data-dismiss="modal">Close</button>
+                </div>
+                <!--- modal body form --->
 
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+              <div class="tab-pane fade" id="panel8" role="tabpanel">
+                <!--- modal body form --->
+                <div class="modal-header modal-color border-bottom-0">
+                </div>
+                <div class="modal-body modal-color">
+                  <div class="form-title text-center">
+                    <h4>Sign up</h4>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <form>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email1" placeholder="Your email">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="password1" placeholder="Your password">
+                      </div>
+                      <button type="button" id="loginbtn" class="btn btn-info btn-block btn-round">Login</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter">or use a social network</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                      <ul class="ul">
+                        <li class="li"><a class="a" href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="li"><a class="a" href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                      </ul>
+                      </di>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="options text-right">
+                    <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log
+                        In</a></p>
+                  </div>
+                  <button type="button" class="btn btn-outline-info waves-effect ml-auto"
+                    data-dismiss="modal">Close</button>
+                </div>
+                <!--- modal body form --->
               </div>
             </div>
           </div>
         </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-<section class="container-fluid spacing-1">
-  <div class="row g-5">
-    <div class="container-fluid d-flex justify-content-center">
-      <!-- Content here -->
-      <h1 class="title">PUPPY LOVE</h1>
+      </div>
     </div>
-  </div>
-</section>
+    <!-- Modal -->
+  </nav>
 
 
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- playdates section -->
+
+  <section>
+    <div class="profile-head">
+    </div>
+  </section>
+  <!-- playdates section end -->
+  <section class="profile-info">
+    <div class="profile-circle border-circle">
+      <img src="/Ollie.png" class="avatar img-raised rounded-circle img-fluid" alt="profilepic">
+      <div class="container text-center user-content">
+        <div class="row">
+
+          <div class="name">
+            <h3 class="">Ollie Gray</h3>
+            <h6>French Bulldog</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae risus hendrerit, lacinia orci a, laoreet lectus. Quisque euismod enim vitae sagittis faucibus. Nulla aliquam elementum ipsum, in efficitur felis facilisis non. Vestibulum laoreet ultrices arcu, at dapibus sapien iaculis maximus. Praesent venenatis sagittis tincidunt.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -74,28 +201,10 @@
           <!-- begin profile -->
           <div class="profile">
             <div class="profile-header">
-              <!-- BEGIN profile-header-cover -->
-              <div class="profile-header-cover"></div>
-              <!-- END profile-header-cover -->
-              <!-- BEGIN profile-header-content -->
-              <div class="profile-header-content">
-                <!-- BEGIN profile-header-img -->
-                <div class="profile-header-img">
-                  <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
-                </div>
-                <!-- END profile-header-img -->
-                <!-- BEGIN profile-header-info -->
-                <div class="profile-header-info">
-                  <h4 class="m-t-10 m-b-5">Sean J</h4>
-                  <p class="m-b-10">DogSite + Firsttime Web Developer</p>
-                  <a href="#" class="btn btn-sm btn-info mb-2">Edit Profile</a>
-                </div>
-                <!-- END profile-header-info -->
-              </div>
-              <!-- END profile-header-content -->
               <!-- BEGIN profile-header-tab -->
               <ul class="profile-header-tab nav nav-tabs">
-                <li class="nav-item"><a href="#profile-post" class="nav-link active show" data-toggle="tab">POSTS</a></li>
+                <li class="nav-item"><a href="#profile-post" class="nav-link active show" data-toggle="tab">POSTS</a>
+                </li>
                 <li class="nav-item"><a href="#profile-about" class="nav-link" data-toggle="tab">ABOUT</a></li>
                 <li class="nav-item"><a href="#profile-photos" class="nav-link" data-toggle="tab">PHOTOS</a></li>
                 <li class="nav-item"><a href="#profile-videos" class="nav-link" data-toggle="tab">VIDEOS</a></li>
@@ -128,20 +237,22 @@
                     <!-- begin timeline-body -->
                     <div class="timeline-body">
                       <div class="timeline-header">
-                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
-                        <span class="username"><a href="javascript:;">Sean J</a> <small></small></span>
-                        <span class="pull-right text-muted">6 Views</span>
+                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            alt=""></span>
+                        <span class="username"><a href="javascript:;">Sean Ngu</a> <small></small></span>
+                        <span class="pull-right text-muted">18 Views</span>
                       </div>
                       <div class="timeline-content">
                         <p>
-                          I look terrible.  But only for now.  Sean is hard at work learning how to web develop.  Soon, I will
-                          blossom into the beautiful web page I know I can be.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt
+                          luctus.
+                          Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
                         </p>
                       </div>
                       <div class="timeline-likes">
                         <div class="stats-right">
                           <span class="stats-text">259 Shares</span>
-                          <span class="stats-text">9 Comments</span>
+                          <span class="stats-text">21 Comments</span>
                         </div>
                         <div class="stats">
                           <span class="fa-stack fa-fw stats-icon">
@@ -156,9 +267,12 @@
                         </div>
                       </div>
                       <div class="timeline-footer">
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                       </div>
                       <div class="timeline-comment-box">
                         <div class="user"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"></div>
@@ -191,17 +305,21 @@
                     <!-- begin timeline-body -->
                     <div class="timeline-body">
                       <div class="timeline-header">
-                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
-                        <span class="username">Sean J</span>
+                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            alt=""></span>
+                        <span class="username">Sean Ngu</span>
                         <span class="pull-right text-muted">82 Views</span>
                       </div>
                       <div class="timeline-content">
                         <p>Location: United States</p>
                       </div>
                       <div class="timeline-footer">
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                       </div>
                     </div>
                     <!-- end timeline-body -->
@@ -221,21 +339,27 @@
                     <!-- begin timeline-body -->
                     <div class="timeline-body">
                       <div class="timeline-header">
-                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
-                        <span class="username">Sean J</span>
+                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            alt=""></span>
+                        <span class="username">Sean Ngu</span>
                         <span class="pull-right text-muted">1,282 Views</span>
                       </div>
                       <div class="timeline-content">
                         <p class="lead">
                           <i class="fa fa-quote-left fa-fw pull-left"></i>
-                          2014 was a crazy year.  During this year, I became a club promoter in San Francisco.  I was coming out of my shell and becoming myself.
+                          Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie
+                          placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna.
+                          Suspendisse mollis in sem vel mollis.
                           <i class="fa fa-quote-right fa-fw pull-right"></i>
                         </p>
                       </div>
                       <div class="timeline-footer">
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                       </div>
                     </div>
                     <!-- end timeline-body -->
@@ -243,7 +367,7 @@
                   <li>
                     <!-- begin timeline-time -->
                     <div class="timeline-time">
-                      <span class="date">14 February 2014</span>
+                      <span class="date">10 January 2014</span>
                       <span class="time">20:43</span>
                     </div>
                     <!-- end timeline-time -->
@@ -255,24 +379,29 @@
                     <!-- begin timeline-body -->
                     <div class="timeline-body">
                       <div class="timeline-header">
-                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
-                        <span class="username">Sean J</span>
+                        <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            alt=""></span>
+                        <span class="username">Sean Ngu</span>
                         <span class="pull-right text-muted">1,021,282 Views</span>
                       </div>
                       <div class="timeline-content">
                         <h4 class="template-title">
                           <i class="fa fa-map-marker text-danger fa-fw"></i>
-                          715 Harrison St, San Francisco, CA 94107
+                          795 Folsom Ave, Suite 600 San Francisco, CA 94107
                         </h4>
-                        <p>The famous club itself.  Made many memories driving into the city with my best friend on a Friday night after a long week of college studies.</p>
+                        <p>In hac habitasse platea dictumst. Pellentesque bibendum id sem nec faucibus. Maecenas
+                          molestie, augue vel accumsan rutrum, massa mi rutrum odio, id luctus mauris nibh ut leo.</p>
                         <p class="m-t-20">
                           <img src="../assets/img/gallery/gallery-5.jpg" alt="">
                         </p>
                       </div>
                       <div class="timeline-footer">
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
-                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                        <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i
+                            class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
                       </div>
                     </div>
                     <!-- end timeline-body -->
@@ -302,5 +431,27 @@
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>
