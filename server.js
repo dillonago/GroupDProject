@@ -12,7 +12,7 @@ const port = 3000;
 const path = require('path');
 
 app.use(express.json())
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 // frontend ===========================================
 app.use(express.static(__dirname + '/assets/images'));
