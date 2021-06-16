@@ -308,15 +308,7 @@ background-color: #ffffffa1;
   text-align:center;
 }
 
-#email1 {
-  border-radius: 4px !important;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 20px;
-}
-
-#password1 {
+.login {
   border-radius: 4px !important;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   padding-top: 10px;

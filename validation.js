@@ -12,6 +12,12 @@ const registerValidation = (data) => {
             .email(),
         password: Joi.string()
             .min(6)
+            .required(),
+        phone: Joi.string()
+            .min(10)
+            .required(),
+        zip: Joi.string()
+            .min(5)
             .required()
     });
     return schema.validate(data);
