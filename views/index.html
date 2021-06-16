@@ -127,17 +127,29 @@
                                         <h4>Sign up</h4>
                                     </div>
                                     <div class="d-flex flex-column text-center">
-                                        <form>
+                                        <form action="user/register" method="post">
                                             <div class="form-group">
-                                                <input type="email" class="form-control" id="email1"
-                                                    placeholder="Your email">
+                                                <input type="name" name="name" class="form-control login" id="name"
+                                                    placeholder="Name" required />
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control" id="password1"
-                                                    placeholder="Your password">
+                                                <input type="email" name="email" class="form-control login" id="email"
+                                                    placeholder="Email" required />
                                             </div>
-                                            <button type="button" id="loginbtn"
-                                                class="btn btn-info btn-block btn-round">Login</button>
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control login" id="password"
+                                                    placeholder="Password" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="phone" name="phone" class="form-control login" id="phone"
+                                                    placeholder="949999999" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="zip" name="zip" class="form-control login" id="zip"
+                                                    placeholder="92620" required />
+                                            </div>
+                                            <button type="submit" id="submitDetails" value="submit"
+                                                class="btn btn-info btn-block btn-round">Submit</button>
                                         </form>
 
                                         <div class="text-center text-muted delimiter">or use a social network</div>
@@ -201,7 +213,8 @@
                 <div class="carousel-item active">
                     <div class="profile-card-6"><img src="/Ollie.png" class="card-img-top img img-responsive">
                         <div class="profile-name">JOHN
-                            <br>DOE</div>
+                            <br>DOE
+                        </div>
                         <div class="profile-position">Lorem Ipsum Donor</div>
                         <div class="profile-overview">
                             <div class="profile-overview">
@@ -226,7 +239,8 @@
                 <div class="carousel-item">
                     <div class="profile-card-6"><img src="/Ollie.png" class="card-img-top img img-responsive">
                         <div class="profile-name">JOHN
-                            <br>DOE</div>
+                            <br>DOE
+                        </div>
                         <div class="profile-position">Lorem Ipsum Donor</div>
                         <div class="profile-overview">
                             <div class="profile-overview">
@@ -251,7 +265,8 @@
                 <div class="carousel-item">
                     <div class="profile-card-6"><img src="/Ollie.png" class="card-img-top img img-responsive">
                         <div class="profile-name">Ollie
-                            <br>Boy</div>
+                            <br>Boy
+                        </div>
                         <div class="profile-position">Lorem Ipsum Donor</div>
                         <div class="profile-overview">
                             <div class="profile-overview">
@@ -312,13 +327,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 
 
 </body>
