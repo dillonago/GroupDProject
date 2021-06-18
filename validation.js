@@ -37,5 +37,21 @@ const loginValidation = (data) => {
     return schema.validate(data);
 }
 
+//Delete validation
+const deleteValidation = (data) => {
+    const schema = Joi.object({
+        email: Joi.string()
+            .min(6)
+            .required()
+            .email(),
+        password: Joi.string()
+            .min(6)
+            .required()
+    });
+    return schema.validate(data);
+}
+
+
 module.exports.registerValidation = registerValidation;
 module.exports.loginValidation = loginValidation;
+module.exports.deleteValidation = deleteValidation;
