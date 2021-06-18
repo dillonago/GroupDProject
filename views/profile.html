@@ -73,18 +73,18 @@
                                     <h4>Welcome Back!</h4>
                                 </div>
                                 <div class="d-flex flex-column text-center">
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control login" id="email1"
-                                                placeholder="Your email">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control login" id="password1"
-                                                placeholder="Your password">
-                                        </div>
-                                        <button type="button" id="loginbtn"
-                                            class="btn btn-info btn-block btn-round">Login</button>
-                                    </form>
+                                  <form action="user/login" method="post">
+                                      <div class="form-group">
+                                          <input type="email" name="email" class="form-control login" id="email"
+                                              placeholder="Email" required />
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="password" name="password" class="form-control login" id="password"
+                                              placeholder="Password" required />
+                                      </div>
+                                      <button type="submit" id="submitDetails" value="submit"
+                                          class="btn btn-info btn-block btn-round">Submit</button>
+                                  </form>
 
                                     <div class="text-center text-muted delimiter">or use a social network</div>
                                     <div class="d-flex justify-content-center social-buttons">
