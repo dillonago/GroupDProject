@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/assets/images'));
 app.use(express.static(__dirname + '/assets/css'));
 
 // config files
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }); //Mongoose connection created
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}); //Mongoose connection created
 
 //Middleware to send post requests
 app.use(express.json());
