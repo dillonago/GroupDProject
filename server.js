@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 
 dotenv.config();
 
@@ -11,10 +12,10 @@ const port = 3000;
 // configuration ===========================================
 const path = require('path');
 
+// Middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-
-// frontend ===========================================
+app.use(cookieParser());
 app.use(express.static(__dirname + '/assets/images'));
 app.use(express.static(__dirname + '/assets/css'));
 
