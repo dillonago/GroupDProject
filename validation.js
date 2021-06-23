@@ -40,6 +40,23 @@ const loginValidation = (data) => {
 //Delete validation
 const deleteValidation = (data) => {
     const schema = Joi.object({
+        user_1: Joi.string()
+            .min(4)
+            .required(),
+        user_2: Joi.string()
+            .min(4)
+            .required(),
+        response: Joi.string()
+            .min(4)
+            .required(),
+    });
+    return schema.validate(data);
+}
+
+/*
+//Like validation
+const likeValidation = (data) => {
+    const schema = Joi.object({
         email: Joi.string()
             .min(6)
             .required()
@@ -50,8 +67,9 @@ const deleteValidation = (data) => {
     });
     return schema.validate(data);
 }
-
+*/
 
 module.exports.registerValidation = registerValidation;
 module.exports.loginValidation = loginValidation;
 module.exports.deleteValidation = deleteValidation;
+//module.exports.likeValidation = likeValidation;

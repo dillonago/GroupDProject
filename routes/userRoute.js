@@ -1,14 +1,25 @@
 const router = require('express').Router();
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const { requireAuth } = require('../middleware/authMiddleware');
+//const cookieParser = require('cookie-parser');
 
 const bcrypt = require('bcryptjs');
-const {registerValidation, loginValidation, deleteValidation} = require('../validation')
+const {registerValidation, loginValidation, deleteValidation/*, likeValidation*/} = require('../validation')
 
+//user profile page
+router.get('/', requireAuth, (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html'));
 
-router.get('/', (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html'));
+//user playdates page
 router.get('/playdates', (req, res) =>  res.sendFile(process.cwd()+'/views/playdates.html'));
 
+//creating a token used for the user in the current session
+const maxAge = 3 * 24 * 60 * 60;
+const createToken = (id) => {
+    return jwt.sign({ id }, process.env.TOKEN_SECRET, {expiresIn: maxAge});
+}
+
+//register a user
 router.post('/register', async (req, res) => {
     const {error} = registerValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
@@ -33,6 +44,8 @@ router.post('/register', async (req, res) => {
 
     try{
         const savedUser = await user.save();
+        const token = createToken(savedUser._id);
+        res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
         res.redirect('/');
         //res.send({user: user._id});
     }catch(err){
@@ -41,35 +54,33 @@ router.post('/register', async (req, res) => {
 
 });
 
-/*
+//like a user
 router.post('/like_user', async (req, res) => {
-    const {error} = registerValidation(req.body);
-    if(error) return res.status(400).send(error.details[0].message);
+    //const {error} = likeValidation(req.body);
+    //if(error) return res.status(400).send(error.details[0].message);
 
-    //Checking if the user is already in the db.
-    const emailExists = await User.findOne({email: req.body.email});
-    if(emailExists) return res.status(400).send('Email already exists');
+    res.send('like_user');
 
-    //Hash passwords
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+    //If there exists a matching 'like' add the like to the existing entry
 
 
-    //Create new user.
-    const user = new User({
-        name: req.body.name,
-        email: req.body.email,
-        password: hashedPassword
+    //If no existing 'like' create new like entry
+    /*
+    const like = new Like({
+        user_1: req.body.user_1,
+        user_2: req.body.user_2,
+        response: req.body.response
     });
     try{
-        const savedUser = await user.save();
-        res.send({user: user._id});
+        const savedLike = await like.save();
+        res.send({user: like._id});
     }catch(err){
         res.status(400).send(err);
     }
+    */
 
 });
-*/
+
 
 //Delete
 router.post('/delete', async (req,res) => {
@@ -95,52 +106,30 @@ router.post('/delete', async (req,res) => {
     });
 });
 
-let refreshTokens = [];
-
-//Refresh token
-router.post('/token', async (req, res) => {
-    const refreshToken = req.body.token;
-    if(refreshToken == null) return res.status(400).send("Refresh token not found.");
-    if(!refreshTokens.includes(refreshToken)) return res.status.send("Wrong token");
-    jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
-        if(err) return res.status(400).send("Error in verification");
-        const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET, {expiresIn: '30s'});
-        res.json({accessToken: token});
-    })
-});
-
 //Edit profile
 //router.post('/edit_profile', async (req, res) => { 
 //});
 
-//Sign out route
-router.delete('/logout', async (req, res) => {
-    refreshTokens = refreshTokens.filter(token => token !== req.body.token);
-    res.status(400).send("token deleted.");
+//Login
+router.post('/login', async (req,res) => {
+    const { email, password } = req.body;
+    try {
+        const user = await User.login(email, password);
+        const token = createToken(user._id);
+        res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+        console.log(user._id);
+        res.redirect('/user');
+    }
+    catch (err) {
+        res.status(400).json({});
+    }
 });
 
 
-//Login
-router.post('/login', async (req,res) => {
-    const {error} = loginValidation(req.body);
-    if(error) return res.status(400).send(error.details[0].message);
-
-    //Checking if email exists
-    const user = await User.findOne({email: req.body.email});
-    if(!user) return res.status(400).send('Email is not found.');
-
-    //Check if password is correct
-    const validPass = await bcrypt.compare(req.body.password, user.password);
-    if(!validPass) return res.status(400).send('Invalid password');
-
-    //Create and assign token
-    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET, {expiresIn: '30s'});
-    const refreshToken = jwt.sign({_id: user._id}, process.env.REFRESH_TOKEN_SECRET);
-    refreshTokens.push(refreshToken);
-    //res.json({token: token, refreshToken: refreshToken});
-    res.redirect('/user');
- 
-    
+//Log out
+router.get('/logout', async (req, res) => {
+    res.cookie('jwt', '', { maxAge: 1 });
+    res.redirect('/');
 });
 
 
