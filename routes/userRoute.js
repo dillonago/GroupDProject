@@ -117,8 +117,56 @@ router.post('/delete', async (req,res) => {
 });
 
 //Edit profile
-//router.post('/edit_profile', async (req, res) => { 
-//});
+router.post('/edit_profile', requireAuth, async (req, res) => { 
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+    var userId = decoded.id;
+    if(req.body.password){
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
+        User.findOneAndUpdate({_id: userId}, {$set:{password: hashedPassword}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("Pass updated");
+        });
+    }
+    if(req.body.name){
+        User.findOneAndUpdate({_id: userId}, {$set:{name: req.body.name}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("Name updated");
+        });
+    }
+    if(req.body.email){
+        User.findOneAndUpdate({_id: userId}, {$set: {email: req.body.email}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("Email updated.");
+        });
+    }
+    if(req.body.phone){
+        User.findOneAndUpdate({_id: userId}, {$set:{phone: req.body.phone}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("Phone updated");
+        });
+
+    }
+    if(req.body.zip){
+        User.findOneAndUpdate({_id: userId}, {$set:{zip: req.body.zip}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("ZIP updated");
+        });
+    }
+
+
+});
 
 //Login
 router.post('/login', async (req,res) => {
