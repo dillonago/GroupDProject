@@ -36,8 +36,13 @@
       </div>
 
       <ul class="navbar-nav ml-auto">
-        <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
+        <% if(user) { %>
+          <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
+          data-target="#loginModal">Logout</a>
+        <% } else { %>
+          <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
           data-target="#loginModal">Login/Signup</a>
+        <% } %>
       </ul>
     </div>
 
@@ -202,8 +207,9 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="profile-card-6"><img src="Ollie.png" class="card-img-top img img-responsive">
-            <div class="profile-name">JOHN
-              <br>DOE</div>
+            <div class="profile-name" id="user-name">
+              Ollie
+            </div>
             <div class="profile-position">Lorem Ipsum Donor</div>
             <div class="profile-overview">
               <div class="profile-overview">

@@ -2,13 +2,23 @@ const router = require('express').Router();
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const { requireAuth } = require('../middleware/authMiddleware');
-//const cookieParser = require('cookie-parser');
 
 const bcrypt = require('bcryptjs');
 const {registerValidation, loginValidation, deleteValidation/*, likeValidation*/} = require('../validation')
 
 //user profile page
-router.get('/', requireAuth, (req, res) =>  res.sendFile(process.cwd()+'/views/profile.html'));
+router.get('/', requireAuth, (req, res) =>  {
+    const token = req.cookies.jwt;
+    const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+    var userId = decoded.id;
+    console.log(userId);
+    // Fetch the user by id
+    User.findOne({ _id: userId }).then((user) => {
+        if(user) {
+            res.render('profile', { user });
+        }
+    });
+});
 
 //user playdates page
 router.get('/playdates', (req, res) =>  res.sendFile(process.cwd()+'/views/playdates.html'));

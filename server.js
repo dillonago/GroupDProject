@@ -4,6 +4,8 @@ const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
+const User = require('./models/User');
 
 dotenv.config();
 
@@ -11,6 +13,9 @@ dotenv.config();
 const port = 3000;
 // configuration ===========================================
 const path = require('path');
+
+// Set EJS as templating engine
+app.set('view engine', 'ejs');
 
 // Middleware
 app.use(express.json())
@@ -26,7 +31,25 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopo
 app.use(express.json());
 
 // frontend routes =========================================================
-app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/views/index.html')));
+app.get('/', (req, res) => {
+   const token = req.cookies.jwt;
+   if(token) {
+      const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+      var userId = decoded.id;
+      console.log(userId);
+      // Fetch the user by id
+      User.findOne({ _id: userId }).then((user) => {
+         if(user) {
+            res.render('index', { user });
+         } else {
+            res.render('index');
+         }
+      });
+   } else {
+      res.render('index', { user: false });
+   }
+   
+});
 
 //defining routes
 const userRoute = require('./routes/userRoute');
