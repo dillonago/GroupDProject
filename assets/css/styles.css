@@ -5,7 +5,7 @@ body {
   font: 600 16px/18px 'Open Sans', sans-serif;
   height: 100%;
   background-color: #bdbdbd8f !important;
-  
+  overflow-x: hidden;
 }
 html {
   height: 100%;
@@ -1263,6 +1263,15 @@ svg {
 .navigation--inline ul {
   display: flex;
 }
+
+.profile-card-size-sm {
+height: 350px;
+width: 350px;
+}
+
+
+
+
 
 
 
