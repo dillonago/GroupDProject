@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <link rel="stylesheet" href="/styles.css">
         <link rel="scripts" href="script.js">
@@ -44,7 +44,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="/"><i class="fas fa-paw"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -55,28 +55,30 @@
                 </div>
 
                 <ul class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
-                            data-target="#loginModal">Login/Signup</a>
+                    <a class="nav-item nav-link text-white" aria-current="page" href="#" data-toggle="modal"
+                       data-target="#loginModal">Login/Signup</a>
                 </ul>
             </div>
 
 
             <!-- Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered cascading-modal" role="document">
                     <div class="modal-content">
                         <div class="modal-c-tabs">
                             <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active form-tabs" data-toggle="tab" href="#panel7" role="tab"><i
-                                            class="fas fa-user mr-1"></i>
-                                        Login</a>
+                                    <a class="nav-link active form-tabs" data-toggle="tab" href="#panel7" role="tab">
+                                        <i class="fas fa-user mr-1"></i>
+                                        Login
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link form-tabs" data-toggle="tab" href="#panel8" role="tab"><i
-                                            class="fas fa-user-plus mr-1"></i>
-                                        Register</a>
+                                    <a class="nav-link form-tabs" data-toggle="tab" href="#panel8" role="tab">
+                                        <i class="fas fa-user-plus mr-1"></i>
+                                        Register
+                                    </a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -89,36 +91,53 @@
                                             <h4>Welcome Back!</h4>
                                         </div>
                                         <div class="d-flex flex-column text-center">
-                                          <form action="user/login" method="post">
-                                              <div class="form-group">
-                                                  <input type="email" name="email" class="form-control login" id="email"
-                                                      placeholder="Email" required />
-                                              </div>
-                                              <div class="form-group">
-                                                  <input type="password" name="password" class="form-control login" id="password"
-                                                      placeholder="Password" required />
-                                              </div>
-                                              <button type="submit" id="submitDetails" value="submit"
-                                                  class="btn btn-info btn-block btn-round">Submit</button>
-                                          </form>
+                                            <form action="user/login" method="post">
+                                                <div class="form-group">
+                                                    <input type="email" name="email" class="form-control login" id="email"
+                                                           placeholder="Email" required />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="password" class="form-control login" id="password"
+                                                           placeholder="Password" required />
+                                                </div>
+                                                <button type="submit" id="submitDetails" value="submit"
+                                                        class="btn btn-info btn-block btn-round">
+                                                    Submit
+                                                </button>
+                                            </form>
 
                                             <div class="text-center text-muted delimiter">or use a social network</div>
                                             <div class="d-flex justify-content-center social-buttons">
                                                 <ul class="ul">
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-facebook"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-facebook"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-twitter"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-twitter"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-google-plus-g"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-google-plus-g"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-linkedin"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-linkedin"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-instagram"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-instagram"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
                                                 </ul>
                                                 </di>
@@ -127,12 +146,18 @@
                                     </div>
                                     <div class="modal-footer">
                                         <div class="options text-center text-md-right mt-1">
-                                            <p>Not a member? <a class="blue-text" data-toggle="tab" href="#panel8">Sign
-                                                    Up</a></p>
+                                            <p>
+                                                Not a member? <a class="blue-text" data-toggle="tab" href="#panel8">
+                                                    Sign
+                                                    Up
+                                                </a>
+                                            </p>
                                             <p>Forgot <a href="#" class="blue-text">Password?</a></p>
                                         </div>
                                         <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                                            data-dismiss="modal">Close</button>
+                                                data-dismiss="modal">
+                                            Close
+                                        </button>
                                     </div>
                                     <!--- modal body form --->
 
@@ -149,45 +174,62 @@
                                             <form action="user/register" method="post">
                                                 <div class="form-group">
                                                     <input type="name" name="name" class="form-control login" id="name"
-                                                        placeholder="Name" required />
+                                                           placeholder="Name" required />
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="email" name="email" class="form-control login" id="email"
-                                                        placeholder="Email" required />
+                                                           placeholder="Email" required />
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="password" name="password" class="form-control login" id="password"
-                                                        placeholder="Password" required />
+                                                           placeholder="Password" required />
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="phone" name="phone" class="form-control login" id="phone"
-                                                        placeholder="949999999" required />
+                                                           placeholder="949999999" required />
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="zip" name="zip" class="form-control login" id="zip"
-                                                        placeholder="92620" required />
+                                                           placeholder="92620" required />
                                                 </div>
                                                 <button type="submit" id="submitDetails" value="submit"
-                                                    class="btn btn-info btn-block btn-round">Submit</button>
+                                                        class="btn btn-info btn-block btn-round">
+                                                    Submit
+                                                </button>
                                             </form>
 
                                             <div class="text-center text-muted delimiter">or use a social network</div>
                                             <div class="d-flex justify-content-center social-buttons">
                                                 <ul class="ul">
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-facebook"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-facebook"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-twitter"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-twitter"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-google-plus-g"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-google-plus-g"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-linkedin"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-linkedin"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
-                                                    <li class="li"><a class="a" href="#"><i class="fab fa-instagram"
-                                                                aria-hidden="true"></i></a>
+                                                    <li class="li">
+                                                        <a class="a" href="#">
+                                                            <i class="fab fa-instagram"
+                                                               aria-hidden="true"></i>
+                                                        </a>
                                                     </li>
                                                 </ul>
                                                 </di>
@@ -196,11 +238,17 @@
                                     </div>
                                     <div class="modal-footer">
                                         <div class="options text-right">
-                                            <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log
-                                                    In</a></p>
+                                            <p class="pt-1">
+                                                Already have an account? <a href="#" class="blue-text">
+                                                    Log
+                                                    In
+                                                </a>
+                                            </p>
                                         </div>
                                         <button type="button" class="btn btn-outline-info waves-effect ml-auto"
-                                            data-dismiss="modal">Close</button>
+                                                data-dismiss="modal">
+                                            Close
+                                        </button>
                                     </div>
                                     <!--- modal body form --->
                                 </div>
@@ -215,18 +263,157 @@
         </div>
         <div class="container-campus text-center">
             <p>Match Found </p>
-	    <p>Let's Set a Playdate </p>
+            <p>Let's Set a Playdate </p>
             <div class="row">
                 <div class="col-sm-4">
                     <img class="campus" src="/img1.jpg">
-		    <p>Tommy</p>
+                    <p>Tommy</p>
                 </div>
                 <div class="col-sm-4">
                     <img class="campus" src="/img3.jpg">
                 </div>
                 <div class="col-sm-4">
                     <img class="campus" src="/img2.jpg">
-		    <p>Jill</p>
+                    <p>Jill</p>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+
+                        <html style="font-size: 16px;">
+                        <head>
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <meta charset="utf-8">
+                            <meta name="keywords" content="Match Found">
+                            <meta name="description" content="">
+                            <meta name="page_type" content="np-template-header-footer-from-plugin">
+                            <title>Home</title>
+                            <link rel="stylesheet" href="/nicepage.css" media="screen">
+                            <link rel="stylesheet" href="/Home.css" media="screen">
+                            <script class="u-script" type="text/javascript" src="script.js" defer=""></script>
+                            <script class="u-script" type="text/javascript" src="script.js" defer=""></script>
+                            <meta name="generator" content="Nicepage 3.18.2, nicepage.com">
+                            <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+                            <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+
+
+                            <script type="application/ld+json">
+                                {
+                                "@context": "http://schema.org",
+                                "@type": "Organization",
+                                "name": ""
+                                }
+                            </script>
+                            <meta name="theme-color" content="#478ac9">
+                            <meta property="og:title" content="Home">
+                            <meta property="og:type" content="website">
+                        </head>
+                        <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+                            <header class="u-clearfix u-header u-header" id="sec-9681"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></header>
+                            <section class="u-align-center u-clearfix u-section-1" id="sec-b007">
+                                <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                                    <h1 class="u-custom-font u-font-oswald u-text u-text-default u-text-1">Match Found</h1>
+                                    <div class="u-expanded-width u-list u-list-1">
+                                        <div class="u-repeater u-repeater-1">
+                                            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                                                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                                                    <div alt="" class="u-image u-image-circle u-image-1" data-image-width="800" data-image-height="825"></div>
+                                                    <h3 class="u-align-center u-custom-font u-font-oswald u-text u-text-2">TOMMy</h3>
+                                                    <div class="u-social-icons u-spacing-10 u-social-icons-1">
+                                                        <a class="u-social-url" target="_blank" href="">
+                                                            <span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7a73"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-7a73" class="u-svg-content"><path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                        <a class="u-social-url" target="_blank" href="">
+                                                            <span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3fbc"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-3fbc" class="u-svg-content"><path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                        <a class="u-social-url" target="_blank" href="">
+                                                            <span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4bc0"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-4bc0" class="u-svg-content"><path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                        <a class="u-social-url" target="_blank" href="#">
+                                                            <span class="u-icon u-icon-circle u-social-icon u-social-linkedin u-icon-4">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1cc8"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-1cc8" class="u-svg-content"><path d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9L24.1,30.9c-6.6,0-10.8-4.5-10.8-10.1c0-5.8,4.3-10.1,10.9-10.1 S34.9,15,35.1,20.8C35.1,26.4,30.8,30.9,24.1,30.9z M103.3,96.8H84.1v-31c0-7.8-2.7-13.1-9.8-13.1c-5.3,0-8.5,3.6-9.9,7.1 c-0.6,1.3-0.6,3-0.6,4.8V97H44.5c0,0,0.3-52.6,0-58h19.3v8.2c2.6-3.9,7.2-9.6,17.4-9.6c12.7,0,22.2,8.4,22.2,26.1V96.8z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                                                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                                                    <div alt="" class="u-image u-image-circle u-image-2" data-image-width="600" data-image-height="600"></div>
+                                                    <h3 class="u-align-center u-custom-font u-font-oswald u-text u-text-3">Let's Set A playdate</h3>
+
+                                                </div>
+                                            </div>
+                                            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                                                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                                                    <div alt="" class="u-image u-image-circle u-image-3" data-image-width="1000" data-image-height="667"></div>
+                                                    <h3 class="u-align-center u-custom-font u-font-oswald u-text u-text-4">Alex&nbsp;</h3>
+                                                    <div class="u-social-icons u-spacing-10 u-social-icons-3">
+                                                        <a class="u-social-url" target="_blank" href="">
+                                                            <span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-9">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7a73"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-7a73" class="u-svg-content"><path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                        <a class="u-social-url" target="_blank" href="">
+                                                            <span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-10">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3fbc"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-3fbc" class="u-svg-content"><path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                        <a class="u-social-url" target="_blank" href="">
+                                                            <span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-11">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4bc0"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-4bc0" class="u-svg-content"><path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                        <a class="u-social-url" target="_blank" href="#">
+                                                            <span class="u-icon u-icon-circle u-social-icon u-social-linkedin u-icon-12">
+                                                                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1cc8"></use></svg>
+                                                                <svg x="0px" y="0px" viewBox="0 0 112 112" id="svg-1cc8" class="u-svg-content"><path d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9L24.1,30.9c-6.6,0-10.8-4.5-10.8-10.1c0-5.8,4.3-10.1,10.9-10.1 S34.9,15,35.1,20.8C35.1,26.4,30.8,30.9,24.1,30.9z M103.3,96.8H84.1v-31c0-7.8-2.7-13.1-9.8-13.1c-5.3,0-8.5,3.6-9.9,7.1 c-0.6,1.3-0.6,3-0.6,4.8V97H44.5c0,0,0.3-52.6,0-58h19.3v8.2c2.6-3.9,7.2-9.6,17.4-9.6c12.7,0,22.2,8.4,22.2,26.1V96.8z"></path></svg>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
