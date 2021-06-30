@@ -46,6 +46,8 @@ router.post('/register', async (req, res) => {
     //Create new user.
     const user = new User({
         name: req.body.name,
+        type: req.body.type,
+        bio: req.body.bio,
         email: req.body.email,
         password: hashedPassword,
         phone: req.body.phone,
@@ -93,7 +95,7 @@ router.post('/like_user', async (req, res) => {
 
 
 //Delete
-router.post('/delete', async (req,res) => {
+router.post('/delete', requireAuth, async (req,res) => {
     const {error} = deleteValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
 
@@ -108,7 +110,7 @@ router.post('/delete', async (req,res) => {
     //Deleting user
     User.findOneAndRemove({email: req.body.email}, function(err) {
         if(!err) {
-            res.send("User deleted.");
+            res.redirect('/logout');
         }
         else {
             res.status(400).send('Error');
@@ -139,6 +141,22 @@ router.post('/edit_profile', requireAuth, async (req, res) => {
             console.log("Name updated");
         });
     }
+    if(req.body.type){
+        User.findOneAndUpdate({_id: userId}, {$set:{type: req.body.type}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("Type updated");
+        });
+    }
+    if(req.body.bio){
+        User.findOneAndUpdate({_id: userId}, {$set:{bio: req.body.bio}}, {new: true}, (err, doc) => {
+            if(err){
+                console.log("Something went wrong");
+            }
+            console.log("Bio updated");
+        });
+    }
     if(req.body.email){
         User.findOneAndUpdate({_id: userId}, {$set: {email: req.body.email}}, {new: true}, (err, doc) => {
             if(err){
@@ -164,6 +182,7 @@ router.post('/edit_profile', requireAuth, async (req, res) => {
             console.log("ZIP updated");
         });
     }
+    res.redirect('/user');
 
 
 });

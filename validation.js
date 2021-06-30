@@ -6,6 +6,10 @@ const registerValidation = (data) => {
         name: Joi.string()
             .min(4)
             .required(),
+        type: Joi.string()
+            .min(4),    
+        bio: Joi.string()
+            .min(10),
         email: Joi.string()
             .min(6)
             .required()
@@ -40,15 +44,13 @@ const loginValidation = (data) => {
 //Delete validation
 const deleteValidation = (data) => {
     const schema = Joi.object({
-        user_1: Joi.string()
-            .min(4)
-            .required(),
-        user_2: Joi.string()
-            .min(4)
-            .required(),
-        response: Joi.string()
-            .min(4)
-            .required(),
+        email: Joi.string()
+            .min(6)
+            .required()
+            .email(),
+        password: Joi.string()
+            .min(6)
+            .required()
     });
     return schema.validate(data);
 }

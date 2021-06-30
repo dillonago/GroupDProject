@@ -39,7 +39,7 @@
       </div>
 
       <ul class="navbar-nav ml-auto">
-        <a class="nav-item nav-link text-white" aria-current="page" href="/user/logout" >Logout</a>
+        <a class="nav-item nav-link text-white" aria-current="page" href="/user/logout">Logout</a>
       </ul>
     </div>
 
@@ -189,6 +189,62 @@
 
   <section>
     <div class="profile-head">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="user/edit_profile" method="post">
+                <div class="form-group">
+                  <input type="name" name="name" class="form-control login" id="name" placeholder="Name"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="type" name="type" class="form-control login" id="type"
+                    placeholder="Type"/>
+                </div>
+                <div class="form-group">
+                  <input type="bio" name="bio" class="form-control login" id="bio" placeholder="Bio"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control login" id="email" placeholder="Email"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" class="form-control login" id="password" placeholder="Password"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="phone" name="phone" class="form-control login" id="phone" placeholder="Phone"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="zip" name="zip" class="form-control login" id="zip" placeholder="Zip"
+                    />
+                </div>
+                <button type="submit" id="submitDetails" value="submit"
+                  class="btn btn-info btn-block btn-round btn-col">Save Changes</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- playdates section end -->
@@ -198,12 +254,16 @@
       <div class="container text-center user-content">
         <div class="row">
 
-          <div class="name">
-            <h3 class="" id="user-name"><%= user.name %></h3>
-            <h6>French Bulldog</h6>
-            <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick
-              Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid
-              groove structure. </p>
+          <div class="name align-items-center justify-content-center">
+            <h3 class="" id="user-name">
+              <%= user.name %>
+            </h3>
+            <h6>
+              <%= user.type %>
+            </h6>
+            <p>
+              <%= user.bio %>
+            </p>
           </div>
 
         </div>
@@ -362,13 +422,13 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 </html>
