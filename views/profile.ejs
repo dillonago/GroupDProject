@@ -206,11 +206,41 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <form action="user/edit_profile" method="post">
+                <div class="form-group">
+                  <input type="name" name="name" class="form-control login" id="name" placeholder="Name"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="type" name="type" class="form-control login" id="type"
+                    placeholder="Type"/>
+                </div>
+                <div class="form-group">
+                  <input type="bio" name="bio" class="form-control login" id="bio" placeholder="Bio"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control login" id="email" placeholder="Email"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" class="form-control login" id="password" placeholder="Password"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="phone" name="phone" class="form-control login" id="phone" placeholder="Phone"
+                    />
+                </div>
+                <div class="form-group">
+                  <input type="zip" name="zip" class="form-control login" id="zip" placeholder="Zip"
+                    />
+                </div>
+                <button type="submit" id="submitDetails" value="submit"
+                  class="btn btn-info btn-block btn-round btn-col">Save Changes</button>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>

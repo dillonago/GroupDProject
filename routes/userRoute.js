@@ -182,6 +182,7 @@ router.post('/edit_profile', requireAuth, async (req, res) => {
             console.log("ZIP updated");
         });
     }
+    res.redirect('/user');
 
 
 });
