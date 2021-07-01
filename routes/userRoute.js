@@ -119,7 +119,7 @@ router.post('/delete', requireAuth, async (req,res) => {
 });
 
 //Edit profile
-router.post('/edit_profile', requireAuth, async (req, res) => { 
+router.post('/edit_profile', requireAuth, async (req, res) => {
     const token = req.cookies.jwt;
     const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
     var userId = decoded.id;
@@ -198,6 +198,7 @@ router.post('/login', async (req,res) => {
         res.redirect('/user');
     }
     catch (err) {
+      alert("Wrong username/password");
         res.status(400).json({});
     }
 });
