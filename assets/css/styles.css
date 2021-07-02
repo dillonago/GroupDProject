@@ -1269,6 +1269,31 @@ height: 350px;
 width: 350px;
 }
 
+.mg-tp-0 {
+  margin-top: 0px !important;
+}
+
+.under {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.bg-color {
+  background-color: white;
+}
+
+.b-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.fri-font {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+
+
 
 
 
