@@ -189,10 +189,6 @@
 
   <section>
     <div class="profile-head">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-      </button>
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -200,7 +196,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -208,32 +204,26 @@
             <div class="modal-body">
               <form action="user/edit_profile" method="post">
                 <div class="form-group">
-                  <input type="name" name="name" class="form-control login" id="name" placeholder="Name"
-                    />
+                  <input type="name" name="name" class="form-control login" id="name" placeholder="Name" />
                 </div>
                 <div class="form-group">
-                  <input type="type" name="type" class="form-control login" id="type"
-                    placeholder="Type"/>
+                  <input type="type" name="type" class="form-control login" id="type" placeholder="Type" />
                 </div>
                 <div class="form-group">
-                  <input type="bio" name="bio" class="form-control login" id="bio" placeholder="Bio"
-                    />
+                  <input type="bio" name="bio" class="form-control login" id="bio" placeholder="Bio" />
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" class="form-control login" id="email" placeholder="Email"
-                    />
+                  <input type="email" name="email" class="form-control login" id="email" placeholder="Email" />
                 </div>
                 <div class="form-group">
-                  <input type="password" name="password" class="form-control login" id="password" placeholder="Password"
-                    />
+                  <input type="password" name="password" class="form-control login" id="password"
+                    placeholder="Password" />
                 </div>
                 <div class="form-group">
-                  <input type="phone" name="phone" class="form-control login" id="phone" placeholder="Phone"
-                    />
+                  <input type="phone" name="phone" class="form-control login" id="phone" placeholder="Phone" />
                 </div>
                 <div class="form-group">
-                  <input type="zip" name="zip" class="form-control login" id="zip" placeholder="Zip"
-                    />
+                  <input type="zip" name="zip" class="form-control login" id="zip" placeholder="Zip" />
                 </div>
                 <button type="submit" id="submitDetails" value="submit"
                   class="btn btn-info btn-block btn-round btn-col">Save Changes</button>
@@ -252,9 +242,9 @@
     <div class="profile-circle border-circle">
       <img src="/Ollie.png" class="avatar img-raised rounded-circle img-fluid" alt="profilepic">
       <div class="container text-center user-content">
-        <div class="row">
+        <div class="text-center">
 
-          <div class="name align-items-center justify-content-center">
+          <div class="name center-items">
             <h3 class="" id="user-name">
               <%= user.name %>
             </h3>
@@ -264,6 +254,9 @@
             <p>
               <%= user.bio %>
             </p>
+            <button type="button" class="btn-sm btn btn-outline-secondary mb-5" data-toggle="modal" data-target="#exampleModal">
+              Edit Profile
+            </button>
           </div>
 
         </div>
@@ -276,8 +269,11 @@
   <!-- Profile content -->
 
   <!--Profile Card Element--->
-  <div class="container-sm">
-    <div class="row">
+  <div class="container-sm bg-color mx-5 b-shadow">
+    <div class="container-fluid align-items-center mb-2 pt-5">
+      <h1 class="fri-font">Friends</h1>
+    </div>
+    <div class="row px-5">
       <div class="col">
         <div id="card3" class="profile-card-6 profile-card-size-sm"><img src="Mable.png"
             class="card-img-top img img-responsive">
@@ -422,13 +418,13 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+  </script>
 </body>
 
 </html>
